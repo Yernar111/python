@@ -1,0 +1,4 @@
+.vscode
+postgresql/requirements.txt
+postgresql/__pycache__
+postgresql/database.ini

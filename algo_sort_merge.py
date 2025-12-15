@@ -1,0 +1,30 @@
+# Merge sort работает за O(n logn), так как она делит массив пополам log n раз(это и есть глубина рекурсии). При слиянии суммарно на каждом уровне мы тратим n времени. 
+def merge(left, right): # Сливаем два отсортированных списка в один отсортированный.
+    i = j = 0
+    merged = []
+    while i < len(left) and j < len(right): 
+        if left[i] <= right[j]: # Если левый указатель меньше правого, то добавляем левый и увеличиваем индекс
+            merged.append(left[i])
+            i += 1
+        else:
+            merged.append(right[j]) # Если правый указатель меньше левого, то добавляем правый и увеличиваем индекс
+            j += 1
+    if i < len(left): # дописываем остатки
+        merged.extend(left[i:]) # То что осталось после слияния одного из двух массивов можно добавить в конец
+    if j < len(right):
+        merged.extend(right[j:])
+    return merged
+
+def merge_sort(arr): # Возвращает новый отсортированный список (рекурсивный merge sort).
+    n = len(arr)
+    if n <= 1: # Когда массив стал длиной 1, просто возвращаем сам массив
+        return arr
+    mid = n // 2
+    left = merge_sort(arr[:mid]) # Делим массив пополам пока не получим массивы длины 1.
+    right = merge_sort(arr[mid:])
+    return merge(left, right)
+
+
+a=list(map(int,input().split()))
+b=merge_sort(a)
+print(b)
