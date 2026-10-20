@@ -1,4 +1,5 @@
 # Реализация стэка через классы
+# Стэк подходит для: function call management, expression evaluation, undo operations, browser history
 class stack():
     def __init__(self):
         self.a=[]

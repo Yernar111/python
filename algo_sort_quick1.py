@@ -1,4 +1,5 @@
 # Quick sort (hoare partition). 
+# Выбираем опорный элемент, слева опорного элемента те кто меньше, а справа те кто больше. Как только 
 def partition_hoare(arr, low, high):
     pivot = arr[(low + high) // 2]  # опорный элемент (medoid). Можно использовать рандомную опору.
     i = low - 1

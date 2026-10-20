@@ -1,4 +1,4 @@
- n,m = map(int, input().split())
+n,m = map(int, input().split())
 a=[]
 for i in range(n):
     x1,y1,x2,y2 = map(int,input().split())

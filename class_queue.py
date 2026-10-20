@@ -1,4 +1,5 @@
 # Реализация очереди через классы
+# Очередь подходит для: Task scheduling in operating systems, BFS, print job management
 class queue():
     def __init__(self):
         self.a=[]

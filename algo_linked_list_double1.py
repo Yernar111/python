@@ -82,15 +82,13 @@ def print_backward():
 
 
 m=list(map(int, input("push_back: ").split()))
-
+k=list(map(int, input("push_front: ").split()))
 a = None
 
 for i in m:
     push_back(i)
 
-m=list(map(int, input("push_front: ").split()))
-
-for i in m:
+for i in k:
     push_front(i)
 
 print_forward()

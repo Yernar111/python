@@ -1,17 +1,23 @@
-t=int(input())
-for i in range(t):
+# map(int,input().split())
+# list(map(int,input().split()))
+# int(input())
+p=int(input())
+for q in range(p):
     n=int(input())
-    a=list(map(int,input().split()))
-        
-    i=k=0
-    j=1
-    while i+j<n:
-        if a[i]>a[i+j]:
-            k+=1
-            j+=1
+    s=input()
+    k=n-2
+    b=[]; i=1; j=n
+    while k>=0:
+        if s[k]=="<":
+            b.append(i)
+            i+=1
         else:
-            i+=j
-            j=1
-    print(k)
+            b.append(j)
+            j-=1
+        k-=1
+    print(i, end=" ")
+    for i in range(n-2,-1,-1):
+        print(b[i], end=" ")
+    print()
 
-
+    
